@@ -164,7 +164,7 @@
                             </svg>
                         </button>
                         <!-- Add the dropdown content -->
-                        <div id="profileDropdown"
+                        {{-- <div id="profileDropdown"
                             class="z-10 w-52 absolute overflow-hidden top-[90%] right-10 bg-white dark:bg-[#1C2037] rounded-lg commonBoxShadow"
                             bis_skin_checked="1">
                             <div class="p-4 flex items-center gap-3" bis_skin_checked="1">
@@ -225,7 +225,7 @@
                                     Logout
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -331,12 +331,12 @@
                         </div>
                         <div class="flex flex-col overflow-y-auto no-scrollbar duration-300 ease-linear p-2 h-full">
                             <nav class="flex flex-col gap-1 p-1">
-                                <div class="banner-yellow hidden cursor-pointer" id="virt_dev_banner">Dev License
-                                    <i class="fa fa-info-circle" aria-hidden="true"></i><span
-                                        class="tooltiptext">This installation of VIRTUALIZOR is running under a
-                                        Development License and is not authorized to be used for production use.
-                                        Please report any cases of abuse to support@virtualizor.com</span>
-                                </div>
+                                <div class="banner-yellow hidden cursor-pointer" id="virt_dev_banner"
+                                    bis_skin_checked="1">Dev License <i class="fa fa-info-circle"
+                                        aria-hidden="true"></i><span class="tooltiptext">This installation of
+                                        VIRTUALIZOR is running under a Development License and is not authorized to be
+                                        used for production use. Please report any cases of abuse to
+                                        support@virtualizor.com</span></div>
                                 <a href="javascript:loadpage('act=listvs');" class="lm-link-class " id="lmlistvs">
                                     <span class="left_menu_i"><svg class="h-6 inline" viewBox="0 0 512 512"
                                             xmlns="http://www.w3.org/2000/svg" stroke="#005BFF" fill="none"
@@ -352,7 +352,7 @@
                                             </g>
                                         </svg></span>
                                     <span class="lm_names">List VPS</span><span class="grow"></span><span
-                                        class="badge-blue" id="vps_count">2</span>
+                                        class="badge-blue" id="vps_count">10</span>
                                 </a>
                                 <a href="javascript:loadpage('act=create')" id="lmcreate"
                                     class="lm-link-class !hidden">
@@ -368,10 +368,8 @@
                                                 <path d="M17 14V17M17 20V17M17 17H14M17 17H20" stroke="#005BFF"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 </path>
-                                                <circle cx="6" cy="7" r="1" fill="#666D80">
-                                                </circle>
-                                                <circle cx="9" cy="7" r="1" fill="#666D80">
-                                                </circle>
+                                                <circle cx="6" cy="7" r="1" fill="#666D80"></circle>
+                                                <circle cx="9" cy="7" r="1" fill="#666D80"></circle>
                                             </g>
                                         </svg></span>
                                     <span class="lm_names">Launch VPS</span>
@@ -1028,7 +1026,7 @@
                                                     <tbody>
                                                         <tr
                                                             class="text-sm text-[#666D80] dark:text-[#989CAE] dark:hover:bg-[#00C88F14] hover:bg-[#00C88F14] transition-all duration-300 border-b border-b-[#ECEFF3] dark:border-b-gray-800">
-                                                            <td class="!px-4 !py-5 whitespace-nowrap">69610</td>
+                                                            <td class="!px-4 !py-5 whitespace-nowrap">1</td>
                                                             <td class="!px-4 !py-5 whitespace-nowrap">
                                                                 <div class="flex items-center gap-2"
                                                                     bis_skin_checked="1">
@@ -1215,31 +1213,32 @@
                                                                 </div>
                                                             </td>
                                                             <td align="center" class="!px-4 !py-5 whitespace-nowrap">
-                                                                <span data-popover-target="stat_69610"
+                                                                <span data-popover-target="stat_1"
                                                                     data-popover-placement="right"><span
                                                                         class="!p-2 badge-green cursor-pointer shadow">Online</span></span>
-                                                                <div data-popover="" id="stat_69610" role="tooltip"
+                                                                <div data-popover="" id="stat_1" role="tooltip"
                                                                     class="absolute z-40 eu_menu_popover opacity-0 invisible"
-                                                                    bis_skin_checked="1" data-popper-placement="right"
+                                                                    bis_skin_checked="1"
+                                                                    data-popper-placement="right"
                                                                     style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(1302.4px, 261.6px, 0px);">
                                                                     <div class="flex gap-4 items-center vpsmanage_icons px-2 py-2"
                                                                         bis_skin_checked="1"><a
                                                                             href="javascript:void(0)"><i
                                                                                 class="fa fa-stop stop"
                                                                                 aria-hidden="true" title="Stop VPS"
-                                                                                onclick="jqueryvpsboot('stop', 'stat_69610', 69610)"></i></a>
+                                                                                onclick="jqueryvpsboot('stop', 'stat_1', 1)"></i></a>
                                                                         <a href="javascript:void(0)"><i
                                                                                 class="fas fa-sync-alt refresh"
                                                                                 aria-hidden="true"
                                                                                 title="Restart VPS"
-                                                                                onclick="jqueryvpsboot('restart', 'stat_69610', 69610)"></i></a><a
+                                                                                onclick="jqueryvpsboot('restart', 'stat_1', 1)"></i></a><a
                                                                             href="javascript:void(0)"><i
                                                                                 class="fa fa-power-off power-off"
                                                                                 title="Poweroff VPS"
-                                                                                onclick="jqueryvpsboot('poweroff', 'stat_69610', 69610)"
+                                                                                onclick="jqueryvpsboot('poweroff', 'stat_1', 1)"
                                                                                 aria-hidden="true"></i></a><a
-                                                                            id="novncURL_69610" class="vncButton"
-                                                                            href="index.php?&amp;act=vnc&amp;novnc=1&amp;jsnohf=1&amp;svs=69610"
+                                                                            id="novncURL_1" class="vncButton"
+                                                                            href="index.php?&amp;act=vnc&amp;novnc=1&amp;jsnohf=1&amp;svs=1"
                                                                             target="_blank"><i
                                                                                 class="fas fa-tv text-blue-600"
                                                                                 title="Launch NoVNC viewer"></i></a>
@@ -1252,7 +1251,7 @@
                                                             <td class="!px-4 !py-5 whitespace-nowrap">
                                                                 <span>
                                                                     <a class="cursor-pointer" title="Manage"
-                                                                        onclick="loadpage('act=vpsmanage&amp;svs=69610');return false;">
+                                                                        onclick="loadpage('act=vpsmanage&amp;svs=1');return false;">
                                                                         <svg class="h-[1.4rem] inline"
                                                                             viewBox="0 0 24 24" fill="none"
                                                                             xmlns="http://www.w3.org/2000/svg">
@@ -1280,8 +1279,8 @@
                                                                 </span>
                                                             </td>
                                                             <td><input type="checkbox" class="ios virt-checkbox"
-                                                                    name="vps_list[]" id="vps-checkbox69610"
-                                                                    value="69610"></td>
+                                                                    name="vps_list[]" id="vps-checkbox1"
+                                                                    value="1"></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
