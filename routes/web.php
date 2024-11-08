@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ServerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/',[ServerController::class,'index'])->name(server.index);
